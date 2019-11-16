@@ -1226,6 +1226,10 @@ class ParseObject {
 
     options = options || {};
     const saveOptions = {};
+    if (options.hasOwnProperty('installationId')) {
+     saveOptions.installationId = options.installationId;
+    }
+    
     if (options.hasOwnProperty('useMasterKey')) {
       saveOptions.useMasterKey = !!options.useMasterKey;
     }
